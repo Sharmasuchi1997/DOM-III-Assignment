@@ -27,7 +27,7 @@ myForm.addEventListener('submit', function(e){
     }
 
     let tbody= document.querySelector('tbody')
-    let row=document.createElement('tr')
+    let row=document.querySelector('tr')
 
     let data=[name, employeeID, department, experience, emailID, mobile, role]
 
@@ -42,17 +42,13 @@ myForm.addEventListener('submit', function(e){
         deleteButton.innerText="Delete"
 
         deleteButton.addEventListener('click', function(){
-            tbody.removeChild(row)
+            deleteButton.removeChild(row)
 
         })
 
         deleteTd.append(deleteButton)
         row.append(deleteTd)
-
-
-
-
-
-     tbody.appendChild(row)
+        
+        tbody.appendChild(row)
 
     })
